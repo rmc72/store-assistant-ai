@@ -4,7 +4,7 @@ Web app based on React and using OpenAI API to provide a product recommender bas
 https://store-assistant-ai.web.app/
 
 1. Create a React web app
-2. 
+
 https://javascript.plainenglish.io/4-react-tips-to-instantly-improve-your-code-7456e028cfa3
 
 npx create-react-app my-app
@@ -14,6 +14,8 @@ npx create-react-app my-app
 npm start
 
     Starts the development server.
+    
+    Would need to execute npm install for every npm module the web app uses
 
 2. Deploy the React web app in Firebase
 
