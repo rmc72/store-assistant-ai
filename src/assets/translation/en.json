@@ -1,0 +1,36 @@
+{
+
+    "title.label": "Inteligencia Artifical - Asistente de Biblioteca",
+  
+    "description.label": "AI Assistant using GPT OpenAI API acting as a librarian to help you find the book you want \
+    and open to talk to you about anything related to books. Responses are AI-generated.",
+
+    "notesTitle.label": "Notes",
+
+    "requestTitle.label": "Request to AI",
+
+    "topsTitle.label": "Top selling books now",
+
+    "contactsTitle.label": "ContactUs",
+
+    "notes.label": "Examples of requests to AI (any language): \n
+    I want a good historic novel about Spain \n
+    Tell me the argument of the book <book title> \n
+    I want a good book for my son 16 years old",
+
+    "requests.label": "Write here (any language)",
+    
+    "aiAnswer.label": "AI Answer",
+
+    "Name.label": "Name",
+
+    "Email.label": "Email",
+
+    "Message.label": "Message",
+
+    "Status.label": "Status",
+
+    "Submit.label": "Submit",
+
+    "Send.label": "Send"
+}
