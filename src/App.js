@@ -23,7 +23,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAl5C_rmFg0Ru8Tok2edzR5LQkaEvcsFmc",
+  apiKey: "YOUR FIREBASE API KEY",
   authDomain: "asistente-tienda-ia.firebaseapp.com",
   projectId: "asistente-tienda-ia",
   storageBucket: "asistente-tienda-ia.appspot.com",
@@ -83,7 +83,7 @@ const languages = [
     const sendEmail = (e) => {
       e.preventDefault(); // prevents the page from reloading when you hit “Send”
       setStatus('Message being sent');
-      emailjs.sendForm('service_gvhd4f6', 'template_s462oj9', form.current, '8siGjTjbrv3GPvIFU')
+      emailjs.sendForm('service_gvhd4f6', 'template_s462oj9', form.current, 'YOUR EMAILJS API KEY')
         .then((result) => {
             // show the user a success message
             alert('Message sent');
@@ -160,51 +160,10 @@ const languages = [
         setResponseText(resp['choices'][0]['message']['content']);
         const emailContent = 'REQUEST: ' + message + ' RESPONSE: ' + resp['choices'][0]['message']['content'];
         emailjs.send('service_gvhd4f6', 'template_s462oj9', {message: emailContent }, 'Your emailjs API KEY');                
-//          setResponseText(resp['choices'][0]['text'] + printSubsInDelimiters(resp['choices'][0]['text']))
       })
      })
-     //const books = printSubsInDelimiters(responseText);
-     //setResponseText(responseText + books);
-
 
 };
-
- /*
-  const handleClick = () => {
-    // 👇 "message" stores input field value
-    //setUpdated(message);
-    setMessage(message);
-    const request = 'Act as a Librarian helping to find the books that I Will ask about and be open to talk about anything related to books. \
-    If you mention a book title, mention it between these two characters []. If the request is not related to books at all, \
-    kindly reject the request saying "Sorry, I am a librarian, I only know about books. Please, tell me about the book you want or ask me \
-    anything related to books". Tell me the answer in the same language as the request. My request is: ' + message;
-    setResponseText(t("waitingAnswer"));
-    const payload = {
-      'model': 'text-davinci-003',
-//      'model': 'gpt-3.5-turbo',      
-//      'prompt': message,
-      'prompt': request,
-      'max_tokens': 300,
-      'temperature': 1.0
-    }
-
-    fetch("https://api.openai.com/v1/completions", {
-       method: 'POST',
-       headers:{
-        'content-type': 'application/json', 
-        'Authorization': 'Bearer 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' 
-       },
-       body: JSON.stringify(payload)
-    }).then((result)=>{
-        result.json().then((resp)=>{
-          setResponseText(resp['choices'][0]['text'])          
-//          setResponseText(resp['choices'][0]['text'] + printSubsInDelimiters(resp['choices'][0]['text']))
-        })
-       })
-       //const books = printSubsInDelimiters(responseText);
-       //setResponseText(responseText + books);
-  };
-*/  
 
   return (
     <div className="App">
@@ -221,13 +180,7 @@ const languages = [
                     value={item.value}>{item.text}</option>);
                 })}
             </select>
- {/*}     <text style={{ fontFamily: 'Verdana', fontSize: '30px' }}>
-         {t("title")} 
-      </text>
-      <p style={{ fontFamily: 'Arial', fontSize: '20px', width:400 }}>
-        {t("description")} 
-      </p> 
-              */}
+
   <Container style={{textAlign: "center", justifyContent: "center"}}>
     <Row>
       <Col style={{textAlign: "center", justifyContent: "center", fontSize: '30px'}}>{t("notesTitle")}
